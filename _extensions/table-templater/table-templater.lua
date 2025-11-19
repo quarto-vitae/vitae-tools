@@ -19,15 +19,21 @@ function Table(el)
 	for i, row in ipairs(el.bodies[1].body) do
 		local cells = row.cells
 		local context = {
-			n = i,
-			col1 = cell_text(cells[1]),
-			col2 = cell_text(cells[2]),
+			title = cell_text(cells[1]),
+			organization = cell_text(cells[2]),
+			location = cell_text(cells[1]),
+			date = cell_text(cells[2]),
 		}
 
-		local template_str = load_template("_extensions/table-templater/test-template.tmpl")
-		local compiled_template = pandoc.template.compile(template_str)
-		local result = pandoc.template.apply(compiled_template, context)
-		output[#output + 1] = result
+		output[#output + 1] = context
 	end
-	return pandoc.read(pandoc.layout.render(pandoc.layout.concat(output))).blocks
+	local final = { rows = output }
+	quarto.log.output(final)
+
+	local template_str = load_template("_extensions/table-templater/test-template.tmpl")
+	local compiled_template = pandoc.template.compile(template_str)
+
+	local result = pandoc.template.apply(compiled_template, final)
+
+	return pandoc.read(pandoc.layout.render(result)).blocks
 end

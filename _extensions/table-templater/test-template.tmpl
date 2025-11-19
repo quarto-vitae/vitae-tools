@@ -1,4 +1,12 @@
-### ${n} 
+**begin{cventries}**
 
-Obtained ${col1} at ${col2}
+$for(rows)$
+<ul>
+    <li>$rows.title$</li>        
+    <li>$rows.organization$  </li>
+    <li>$rows.location$      </li>
+    <li>$rows.date$          </li>
+    </ul>
+$endfor$
 
+**end{cventries}**

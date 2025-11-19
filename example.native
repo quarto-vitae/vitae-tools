@@ -8,8 +8,7 @@ Pandoc
             )
           ]
     }
-  [ Header
-      2 ( "heading" , [] , [] ) [ Emph [ Str "Heading" ] ]
+  [ Header 2 ( "heading" , [] , [] ) [ Str "Heading" ]
   , Para
       [ Str "This"
       , Space

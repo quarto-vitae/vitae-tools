@@ -2,7 +2,7 @@
 title: "Table-templater Example"
 filters:
   - table-templater
-format: native
+format: html
 ---
 
 ## Heading
