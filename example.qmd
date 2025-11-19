@@ -1,7 +1,7 @@
 ---
-title: "Table-templater Example"
+title: "Example of table generated vitae entries"
 filters:
-  - table-templater
+  - vitae-entries
 format: html
 ---
 
