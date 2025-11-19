@@ -1,0 +1,19 @@
+---
+title: "Table-templater Example"
+filters:
+  - table-templater
+format: native
+---
+
+## Heading
+
+This filter adds formatting to heading text.
+
+| Degree             | Institution                | Years      | Location       |
+|--------------------|---------------------------|------------|-----------------|
+| B.Sc. in Biology   | State University          | 2018–2022  | Anytown, USA    |
+| M.Sc. in Chemistry | City College              | 2022–2024  | Somewhere, USA  |
+| Ph.D. in Physics   | Research Institute        | 2024–2028  | Elsewhere, USA  |
+
+
+
